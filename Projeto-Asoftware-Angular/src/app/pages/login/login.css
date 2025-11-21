@@ -1,0 +1,14 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8fafc; /* fundo suave */
+  gap: 80px;
+}
+
+.divider {
+  width: 1px;
+  height: 250px;
+  background-color: #e2e8f0;
+}

@@ -1,0 +1,107 @@
+/* Fundo geral */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f6f9;
+  gap: 60px;
+}
+
+/* Logo */
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-image {
+  width: 220px;
+  height: auto;
+}
+
+/* Divisor vertical */
+.divider {
+  width: 1px;
+  height: 260px;
+  background-color: #dcdcdc;
+}
+
+/* Caixa de login */
+.login-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 50px;
+  width: 300px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #1a2a47;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Campos de input */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 10px 10px 10px 32px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-wrapper input:focus {
+  border-color: #4c7cf3;
+}
+
+/* Botão */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #1c3b5f, #5ba7d1);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
