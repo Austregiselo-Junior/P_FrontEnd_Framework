@@ -94,7 +94,7 @@ h2 {
 .acoes {
     display: flex;
     gap: 8px;
-    width: 150px;
+    width: 80px;
 }
 
 .btn {
@@ -103,11 +103,6 @@ h2 {
     cursor: pointer;
     border: none;
     font-weight: 500;
-}
-
-.detalhes {
-    background-color: #55b7e7;
-    color: white;
 }
 
 .editar {
