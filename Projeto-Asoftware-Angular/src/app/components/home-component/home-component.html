@@ -1,0 +1,44 @@
+
+
+    <div class="topbar">
+        <div class="brand">Asoftware</div>
+        <button class="logout-btn"(click)="navigateToLogin()">Sair</button>
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <h2>Pacientes</h2>
+            <button class="btn add-btn" (click)="abrirDialog()">Adicionar Novo Paciente</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>PACIENTE</th>
+                    <th>TELEFONE PARA CONTATO</th>
+                    <th>DATA DA CONSULTA</th>
+                    <th>AÇÕES</th>
+                </tr>
+            </thead>
+
+            <tbody class="tableContent">
+                <tr *ngFor="let p of pacientes; let i = index">
+                    <td>{{p.nome}}</td>
+                    <td>{{ p.telefone }}</td>
+                    <td>{{ p.consulta }}</td>
+                    <td class="acoes">
+                        <button class="btn detalhes">Detalhes</button>
+                        <button class="btn editar">Editar</button>
+                        <button class="btn deletar" (click)="deletarPaciente(i)">Deletar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer">
+        <div class="brand">Asoftware</div>
+    </div>
+
+<app-add-paciente-modal #dialog (pacienteAdicionado)="adicionarPaciente($event)">
+</app-add-paciente-modal>
+

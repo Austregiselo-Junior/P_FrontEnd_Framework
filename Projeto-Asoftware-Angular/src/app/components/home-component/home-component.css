@@ -1,0 +1,143 @@
+/* Barra superior */
+.topbar {
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+    
+        background-color: #262a2e;
+        color: white;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+/* Nome da aplicação */
+.brand {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
+}
+
+/* Botão de sair */
+.logout-btn {
+    background: none;
+    margin: 10px;
+    border: none;
+    color: #d1d1d1;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    color: white;
+}
+
+.container {
+    margin: 80px auto;
+    max-width: 1100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.add-btn {
+    background-color: rgb(34, 148, 64);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.add-btn:hover {
+    opacity: 0.9;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+.table tbody tr {
+    background-color: #f5f5f6;
+    border-bottom: 0.5px solid #ddd;
+    border-radius: 10%;
+}
+
+.table tbody td {
+    padding: 12px;
+    
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+    width: 150px;
+}
+
+.btn {
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+}
+
+.detalhes {
+    background-color: #55b7e7;
+    color: white;
+}
+
+.editar {
+    background-color: #e6c23a;
+    color: black;
+}
+
+.deletar {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+
+    background-color: #262a2e;
+    /* Cor igual à imagem */
+    color: white;
+    padding: 0px;
+    margin: 0%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
