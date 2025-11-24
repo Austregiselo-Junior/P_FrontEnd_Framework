@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddPacienteModalComponent {
 isOpen = false;
+modoEdicao: boolean = false;
 
   paciente = {
     nome: '',
@@ -23,17 +24,26 @@ isOpen = false;
 
   close() {
     this.isOpen = false;
+    this.modoEdicao = false;
   }
 
   save() {
-    console.log('Paciente salvo:', this.paciente);
-    this.pacienteAdicionado.emit(this.paciente);
+    if (this.modoEdicao){
+      console.log('Paciente salvo:', this.paciente);
+      this.pacienteEditado.emit(this.paciente);
+    }else {
+      console.log('Paciente salvo:', this.paciente);
+      this.pacienteAdicionado.emit(this.paciente);
+    }
+    
 
     // Fecha o modal e reseta os campos
     this.close();
     this.paciente = { nome: '', telefone: '', consulta: '' };
+    this.modoEdicao = false;
   }
 
+  @Output() pacienteEditado = new EventEmitter<any>();
   @Output() pacienteAdicionado = new EventEmitter<any>();
   
   isFormValid(): boolean {

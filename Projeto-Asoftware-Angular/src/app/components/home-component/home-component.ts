@@ -33,12 +33,31 @@ export class HomeComponent {
     this.pacientes.push(paciente);
   }
 
+  atualizarPaciente(pacienteAtualizado: any) {
+  if (this.pacienteEditandoIndex !== null) {
+    this.pacientes[this.pacienteEditandoIndex] = pacienteAtualizado;
+    this.pacienteEditandoIndex = null;
+  }
+}
+
   navigateToLogin() {
     this.router.navigate(['/login']);
   }
 
   deletarPaciente(index: number) {
     this.pacientes.splice(index, 1);
+  }
+
+  pacienteEditandoIndex: number | null = null;
+
+  editarPaciente(index: number) {
+    this.pacienteEditandoIndex = index;
+
+    // Preenche o modal com os dados do paciente
+    this.dialog.paciente = { ...this.pacientes[index] };
+    this.dialog.modoEdicao = true;
+
+    this.dialog.open();
   }
 }
 
