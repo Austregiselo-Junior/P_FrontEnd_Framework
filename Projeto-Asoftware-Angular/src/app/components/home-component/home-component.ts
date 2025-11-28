@@ -42,8 +42,8 @@ export class HomeComponent {
   }
 }
 
-  navigateToLogin() {
-    this.router.navigate(['/login']);
+  navigateToLand() {
+    this.router.navigate(['/land']);
   }
 
   deletarPaciente(index: number) {
