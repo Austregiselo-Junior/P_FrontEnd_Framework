@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddPacienteModalComponent } from '../add-paciente-modal.component/add-paciente-modal.component';
+import { EditPacientModalComponent } from '../edit-pacient-modal.component/edit-pacient-modal.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-component',
-  imports: [CommonModule, AddPacienteModalComponent],
+  imports: [CommonModule, AddPacienteModalComponent, EditPacientModalComponent],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -23,10 +24,11 @@ export class HomeComponent {
     },
   ];
 
-  @ViewChild(AddPacienteModalComponent) dialog!: AddPacienteModalComponent;
+  @ViewChild(AddPacienteModalComponent) addDialog!: AddPacienteModalComponent;
+  @ViewChild(EditPacientModalComponent) editDialog!: EditPacientModalComponent;
 
   abrirDialog() {
-    this.dialog.open();
+    this.addDialog.open();
   }
 
   adicionarPaciente(paciente: any) {
@@ -52,12 +54,10 @@ export class HomeComponent {
 
   editarPaciente(index: number) {
     this.pacienteEditandoIndex = index;
+    // Preenche o modal de edição com os dados do paciente
+    this.editDialog.paciente = { ...this.pacientes[index] };
 
-    // Preenche o modal com os dados do paciente
-    this.dialog.paciente = { ...this.pacientes[index] };
-    this.dialog.modoEdicao = true;
-
-    this.dialog.open();
+    this.editDialog.open();
   }
 }
 

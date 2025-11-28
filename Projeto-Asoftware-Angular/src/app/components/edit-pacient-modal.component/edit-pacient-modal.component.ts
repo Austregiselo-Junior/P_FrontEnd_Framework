@@ -1,16 +1,15 @@
-import { Component, EventEmitter, Output} from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-add-paciente-modal',
-  templateUrl: './add-paciente-modal.component.html',
-  styleUrl: './add-paciente-modal.component.css',
-  imports: [CommonModule, FormsModule]
+  selector: 'app-edit-paciente-modal',
+  imports: [CommonModule, FormsModule],
+  templateUrl: './edit-pacient-modal.component.html',
+  styleUrl: './edit-pacient-modal.component.css',
 })
-export class AddPacienteModalComponent {
-isOpen = false;
-
+export class EditPacientModalComponent {
+  isOpen = false;
 
   paciente = {
     nome: '',
@@ -27,18 +26,16 @@ isOpen = false;
   }
 
   save() {
+    console.log('Paciente salvo (edit):', this.paciente);
+    this.pacienteEditado.emit(this.paciente);
 
-      console.log('Paciente salvo:', this.paciente);
-      this.pacienteAdicionado.emit(this.paciente);
-    
     // Fecha o modal e reseta os campos
     this.close();
     this.paciente = { nome: '', telefone: '', consulta: '' };
   }
 
+  @Output() pacienteEditado = new EventEmitter<any>();
 
-  @Output() pacienteAdicionado = new EventEmitter<any>();
-  
   isFormValid(): boolean {
     return this.paciente.nome.trim() !== '' &&
       this.paciente.telefone.trim() !== '' &&

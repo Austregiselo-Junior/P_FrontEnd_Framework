@@ -38,8 +38,11 @@
         <div class="brand">Asoftware</div>
     </div>
 
-<app-add-paciente-modal #dialog 
-    (pacienteAdicionado)="adicionarPaciente($event)"
-    (pacienteEditado)="atualizarPaciente($event)">
+<app-add-paciente-modal #addDialog 
+    (pacienteAdicionado)="adicionarPaciente($event)">
 </app-add-paciente-modal>
+
+<app-edit-paciente-modal #editDialog
+    (pacienteEditado)="atualizarPaciente($event)">
+</app-edit-paciente-modal>
 
