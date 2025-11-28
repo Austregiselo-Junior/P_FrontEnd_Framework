@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { EMPTY } from 'rxjs';
 
 @Component({
   selector: 'app-add-paciente-modal',
@@ -23,6 +24,7 @@ isOpen = false;
 
   close() {
     this.isOpen = false;
+    this.paciente = { nome: '', telefone: '', consulta: '' };
   }
 
   save() {
