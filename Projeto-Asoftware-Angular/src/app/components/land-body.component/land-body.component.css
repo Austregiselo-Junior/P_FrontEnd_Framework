@@ -1,0 +1,41 @@
+
+
+.hero{
+	display: flex;
+	align-items: center;
+	min-height: calc(100vh - 120px);
+	gap: 40px;
+	padding: 24px 48px;
+	box-sizing: border-box;
+}
+
+.hero-left{
+	flex: 0 0 46%;
+}
+
+.hero-image{
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 6px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.hero-right{
+	flex: 1 1 54%;
+}
+
+.hero-right h1{
+	font-size: 4rem;
+	line-height: 0.95;
+	margin: 0;
+	font-weight: 700;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+@media (max-width: 900px){
+	.hero{flex-direction:column;}
+	.hero-left{width:100%;}
+	.hero-right h1{font-size:2rem;text-align:center}
+}
+

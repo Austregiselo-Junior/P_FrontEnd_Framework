@@ -27,7 +27,7 @@
                     <td>{{ p.telefone }}</td>
                     <td>{{ p.consulta }}</td>
                     <td class="acoes">
-                        <button class="btn editar">Editar</button>
+                        <button class="btn editar" (click)="editarPaciente(i)">Editar</button>
                         <button class="btn deletar" (click)="deletarPaciente(i)">Deletar</button>
                     </td>
                 </tr>
@@ -38,6 +38,11 @@
         <div class="brand">Asoftware</div>
     </div>
 
-<app-add-paciente-modal #dialog (pacienteAdicionado)="adicionarPaciente($event)">
+<app-add-paciente-modal #addDialog 
+    (pacienteAdicionado)="adicionarPaciente($event)">
 </app-add-paciente-modal>
+
+<app-edit-paciente-modal #editDialog
+    (pacienteEditado)="atualizarPaciente($event)">
+</app-edit-paciente-modal>
 
