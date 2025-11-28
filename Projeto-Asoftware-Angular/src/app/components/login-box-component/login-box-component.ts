@@ -29,6 +29,10 @@ export class LoginBoxComponent {
       this.loginError = true;
     }
   }
+
+  GoBack() {
+    this.router.navigate(['/land']);
+  }
 }
 
 

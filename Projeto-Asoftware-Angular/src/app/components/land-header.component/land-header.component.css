@@ -1,30 +1,39 @@
-( :host ) {
-	display: block;
-}
+.land-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
 
-.land-header{
+	background-color: #262a2e;
+	color: white;
+
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
-	padding: 18px 28px;
-	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	padding: 90 0px;
+	/* Adiciona espaçamento interno */
 }
 
-.brand{
+.login-btn {
+	padding: 5px 50px;
+	margin: 0px 0px 0px 20px;
+	background: linear-gradient(to right, #1c3b5f, #5ba7d1);
+	border: none;
+	border-radius: 6px;
+	color: white;
 	font-weight: 500;
+	font-size: 15px;
+	cursor: pointer;
+	margin-top: 0;
+	/* Remove o espaçamento superior */
+	margin-right: 0;
+	/* Ajusta o botão ao lado direito */
+	transition: 0.2s;
 }
 
-.login-btn{
-	text-decoration: none;
-	border: 1px solid #111;
-	padding: 8px 12px;
-	border-radius: 4px;
-	color: #111;
-	font-size: 13px;
+.header-actions {
+	display: flex;
+	align-items: right;
+	margin-right: 20px;
 }
-
-.login-btn:hover{
-	background: #111;
-	color: #fff;
-}
-

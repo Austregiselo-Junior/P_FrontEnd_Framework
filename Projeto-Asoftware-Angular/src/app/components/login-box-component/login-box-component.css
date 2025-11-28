@@ -1,3 +1,39 @@
+/* Barra superior */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  background-color: #262a2e;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+/* Botão de voltar */
+.logout-btn {
+  background: none;
+  margin: 10px;
+  border: none;
+  color: #d1d1d1;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  color: white;
+}
+
 /* Fundo geral */
 .login-container {
   display: flex;
@@ -104,4 +140,22 @@
 .login-btn:hover {
   opacity: 0.9;
   transform: scale(1.02);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  background-color: #262a2e;
+  /* Cor igual à imagem */
+  color: white;
+  padding: 0px;
+  margin: 0%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
