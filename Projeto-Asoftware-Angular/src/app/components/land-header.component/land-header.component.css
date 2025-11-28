@@ -1,0 +1,30 @@
+( :host ) {
+	display: block;
+}
+
+.land-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 28px;
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.brand{
+	font-weight: 500;
+}
+
+.login-btn{
+	text-decoration: none;
+	border: 1px solid #111;
+	padding: 8px 12px;
+	border-radius: 4px;
+	color: #111;
+	font-size: 13px;
+}
+
+.login-btn:hover{
+	background: #111;
+	color: #fff;
+}
+
